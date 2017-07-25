@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/nav_info"
+        app:showAsAction="never"
+        android:icon="@mipmap/ic_person_black_24dp"
+        android:title="My Info"/>
+
+    <item android:id="@+id/nav_home"
+        app:showAsAction="never"
+        android:icon="@mipmap/ic_home_black_24dp"
+        android:title="Home"/>
+
+    <item android:id="@+id/nav_update"
+        app:showAsAction="never"
+        android:icon="@mipmap/ic_settings_black_24dp"
+        android:title="Update"/>
+
+    <item android:id="@+id/nav_pass"
+        app:showAsAction="never"
+        android:icon="@mipmap/ic_compare_arrows_black_24dp"
+        android:title="Change Password"/>
+
+    <item android:id="@+id/nav_delac"
+        app:showAsAction="never"
+        android:icon="@mipmap/ic_delete_black_24dp"
+        android:title="Delete Account"/>
+
+    <item android:id="@+id/nav_logout"
+        android:icon="@mipmap/logout"
+        app:showAsAction="never"
+        android:title="Logout"
+        android:orderInCategory="100"/>
+
+</menu>

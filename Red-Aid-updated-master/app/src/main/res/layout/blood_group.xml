@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="0dp"
+    android:orientation="vertical"
+
+    android:weightSum="1">
+
+
+    <CheckBox
+        android:text="A+"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/A_positive"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="20dp"
+        android:paddingLeft="20dp"
+        android:textSize="20sp"/>
+
+    <CheckBox
+        android:text="O+"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/O_positive"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="20dp"
+        android:paddingLeft="20dp"
+        android:textSize="20sp"/>
+
+    <CheckBox
+        android:text="B+"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/B_positive"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="20dp"
+        android:paddingLeft="20dp"
+        android:textSize="20sp"/>
+
+    <CheckBox
+        android:text="AB+"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/AB_positive"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="20dp"
+        android:paddingLeft="20dp"
+        android:textSize="20sp"/>
+
+    <CheckBox
+        android:text="A-"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/A_negative"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="20dp"
+        android:paddingLeft="20dp"
+        android:textSize="20sp"/>
+
+    <CheckBox
+        android:text="O-"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/O_negative"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="20dp"
+        android:paddingLeft="20dp"
+        android:textSize="20sp"/>
+
+    <CheckBox
+        android:text="B-"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/B_negative"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="20dp"
+        android:paddingLeft="20dp"
+        android:textSize="20sp"/>
+
+    <CheckBox
+        android:text="AB-"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/AB_negative"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="20dp"
+        android:paddingLeft="20dp"
+        android:textSize="20sp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PROCEED"
+        android:padding="10dp"
+        android:id="@+id/proceed"
+        android:background="#D50000"
+        android:layout_gravity="center_horizontal"
+        android:textColor="#ffffff"
+        android:layout_weight="0.15" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:hint="here"
+        android:id="@+id/infor"/>
+
+</LinearLayout>
+

@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Red Aid</string>
+    <string name="str_atv_places">Enter your locality</string>
+    <string name="title_activity_start">Red Aid</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="title_profile_activity">My Profile</string>
+
+    <string name="facebook_app_id">1848432952135684</string>
+    <string name="fb_login_protocol_scheme">fb1848432952135684</string>
+
+    <string name="btn_logout_from_google">Logout from Google</string>
+    <string name="btn_revoke_access">Revoke Access</string>
+
+    <string name="country_prompt">Your Blood Group</string>
+
+    <string-array name="country_arrays">
+        <item>A+</item>
+        <item>B+</item>
+        <item>O+</item>
+        <item>AB+</item>
+        <item>A-</item>
+        <item>O-</item>
+        <item>B-</item>
+        <item>AB-</item>
+    </string-array>
+    <string name="title_activity_profile_map">Map</string>
+
+</resources>

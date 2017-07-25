@@ -1,0 +1,65 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "25.0.2"
+
+    defaultConfig {
+        applicationId "com.example.charul.webservicedemo"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+
+    }
+
+
+    dexOptions
+            {
+                incremental false
+                javaMaxHeapSize "2048M"
+                preDexLibraries = false
+            }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    //compile 'com.android.support:appcompat-v7:23.0.1'
+    
+
+
+
+
+
+    //this is added to guide the studio to download this sdkapply plugin: 'com.google.gms.google-services'
+
+
+    //gplus
+
+    
+    //for downloading image from google+
+
+    compile 'com.android.support:support-v4:23.4.0'
+    compile 'com.google.firebase:firebase-auth:9.4.0'
+    compile 'com.google.firebase:firebase-database:9.4.0'
+    compile 'com.google.android.gms:play-services-appindexing:9.4.0'
+    compile 'com.android.support:design:23.4.0'
+    compile 'com.firebase:firebase-client-android:2.4.0'
+    compile 'com.facebook.android:facebook-android-sdk:4.0.0'
+    compile 'com.google.firebase:firebase-core:9.4.0'
+    compile 'com.google.android.gms:play-services:9.4.0'
+    compile 'com.google.android.gms:play-services-auth:9.4.0'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    testCompile 'junit:junit:4.12'
+}
+apply plugin: 'com.google.gms.google-services'
