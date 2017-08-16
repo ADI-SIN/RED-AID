@@ -60,6 +60,9 @@ public class BloodGroup extends AppCompatActivity {
     private String address;
     private ProgressDialog progressdialog;
 
+    private String[] list = new String[10];
+    private  String[] numbr = new String[10];
+
 
 
 
@@ -105,6 +108,7 @@ public class BloodGroup extends AppCompatActivity {
 
                 //mref=new Firebase("https://red-aid.firebaseio.com/"+uid);
 
+
                 mref = new Firebase("https://red-aid.firebaseio.com/");
 
 
@@ -114,6 +118,8 @@ public class BloodGroup extends AppCompatActivity {
                 info.addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot) {
+
+                        int count=-1;
 
                         for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
 
@@ -135,27 +141,32 @@ public class BloodGroup extends AppCompatActivity {
 
 
                             if (dist < 10000) {
-                                f = "Name: "+n+ "\nContact: "+num+"\nAddress: "+address+"\n\n";
+                                f = "Name: "+n+ "\nContact: "+num+"\nAddress: "+address;
+                                count++;
+                                list[count]=f;
+                                numbr[count]=num;
 
-                                infor.append(f);
-                                 s=infor.getText().toString();
+                                /*infor.append(f);
+                                 s=infor.getText().toString();*/
                             }
-                            //String dist1 = Double.toString(dist);
-                            //infor.setText(address +"\n"+Double.toString(lat2)+" , "+Double.toString(long2));
 
 
+                        }
+                        infor.setText(Integer.toString(count)+list[1]);
 
 
+                       Intent a= new Intent(getApplicationContext(), data.class);
+                        a.putExtra("string", s);
+                        a.putExtra("number", num);
+                        a.putExtra("blood",blood);
+                        a.putExtra("county",count);
+                        a.putExtra("lists",list);
+                        a.putExtra("contacts",numbr);
+                        if(address!=null){
+                            finish();
+                            //Toast.makeText(BloodGroup.this,Integer.toString(count),Toast.LENGTH_SHORT).show();
+                            startActivity(a);
 
-                            Intent a= new Intent(getApplicationContext(), data.class);
-                            a.putExtra("string", s);
-                            a.putExtra("number", num);
-                            a.putExtra("blood",blood);
-                            if(address!=null){
-                                //Toast.makeText(BloodGroup.this, "taking too much time.. press proceed again",Toast.LENGTH_SHORT).show();
-                                startActivity(a);
-
-                            }
                         }
 
                     }
@@ -166,54 +177,6 @@ public class BloodGroup extends AppCompatActivity {
                     }
                 });
 
-              /*  info.addChildEventListener(new ChildEventListener() {
-                    @Override
-                    public void onChildAdded(DataSnapshot dataSnapshot, String s) {
-                        Person person=dataSnapshot.getValue(Person.class);
-                        num = person.getNumber().toString().trim();
-
-                        Bundle bundle=getIntent().getExtras();
-                        lat1 = bundle.getDouble("latitude");
-                        long1 = bundle.getDouble("longitude");
-
-                        address = person.getAddress().toString().trim();
-
-
-
-
-                    }
-
-                    @Override
-                    public void onChildChanged(DataSnapshot dataSnapshot, String s) {
-
-                    }
-
-                    @Override
-                    public void onChildRemoved(DataSnapshot dataSnapshot) {
-
-                    }
-
-                    @Override
-                    public void onChildMoved(DataSnapshot dataSnapshot, String s) {
-
-                    }
-
-                    @Override
-                    public void onCancelled(FirebaseError firebaseError) {
-
-                    }
-
-
-
-
-
-                });   */
-
-
-
-
-
-
 
             }
         });
@@ -221,18 +184,6 @@ public class BloodGroup extends AppCompatActivity {
 
     }
 
-  /*  private double distance(double lat1, double lon1, double lat2, double lon2) {
-        double theta = lon1 - lon2;
-         dist = Math.sin(deg2rad(lat1))
-                * Math.sin(deg2rad(lat2))
-                + Math.cos(deg2rad(lat1))
-                * Math.cos(deg2rad(lat2))
-                * Math.cos(deg2rad(theta));
-        dist = Math.acos(dist);
-        dist = rad2deg(dist);
-        dist = dist * 60 * 1.1515;
-        return (dist);
-    }*/
 
     private double deg2rad(double deg) {
         return (deg * Math.PI / 180.0);

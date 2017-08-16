@@ -31,11 +31,14 @@ public class sms extends AppCompatActivity {
         call = (Button) findViewById(R.id.button7);
         txtphoneNo = (EditText) findViewById(R.id.editText);
         txtMessage = (EditText) findViewById(R.id.editText2);
+        Intent intn = new Intent();
+        final String phoneNo= intn.getStringExtra("contacts1");
+       // txtphoneNo.setText(phone);
 
         sendBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
 
-                phoneNo = txtphoneNo.getText().toString().trim();
+              //  phoneNo = txtphoneNo.getText().toString().trim();
                 message = "Message from Red Aid :- "+txtMessage.getText().toString().trim();
 
                 sendSMS(phoneNo, message);
@@ -47,7 +50,7 @@ public class sms extends AppCompatActivity {
             public void onClick(View v) {
                 try {
                     Intent callIntent = new Intent(Intent.ACTION_DIAL);
-                    callIntent.setData(Uri.parse("tel:" + txtphoneNo.getText().toString().trim()));
+                    callIntent.setData(Uri.parse("tel:" + phoneNo));
 
                     startActivity(callIntent);
                 } catch (ActivityNotFoundException activityException) {

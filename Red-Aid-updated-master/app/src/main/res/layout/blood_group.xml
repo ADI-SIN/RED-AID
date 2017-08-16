@@ -107,5 +107,6 @@
         android:hint="here"
         android:id="@+id/infor"/>
 
+
 </LinearLayout>
 
