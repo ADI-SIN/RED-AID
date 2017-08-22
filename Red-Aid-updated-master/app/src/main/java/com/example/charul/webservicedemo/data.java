@@ -50,7 +50,7 @@ public class data extends AppCompatActivity {
 
       //  textview.setMovementMethod(new ScrollingMovementMethod());
         head1 = (TextView)findViewById(R.id.head) ;
-        mainLayout = (LinearLayout)findViewById(R.id.activity_data);
+        mainLayout = (LinearLayout) findViewById(R.id.activity_data);
 
 
         Bundle bundle=getIntent().getExtras();
